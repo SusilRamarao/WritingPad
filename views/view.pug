@@ -1,0 +1,14 @@
+
+doctype html
+html(lang="en")
+  head
+    title= ViewPage
+    link(rel="stylesheet" href="css/styles.css" type="text/css")
+  body(bgcolor="#f5f5f5")
+    h1(align="center") Your content in past
+    br
+    each user in users
+      h3 #{user.firstName} #{user.lastName}
+
+      p #{user.content}
+      p -------------------------------------------------
