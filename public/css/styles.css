@@ -84,6 +84,47 @@ button:hover {
 p {
   font-size: 140%;
 }
+
+.menu{
+  width: 20%;
+  background-color: #665851;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  position: absolute;
+  left:40%;
+}
+.menu.one{
+  top:60%;
+}
+.menu.two{
+  top:70%;
+}
+.menu.three{
+  top:80%;
+}
+.wrapper {
+    text-align: center;
+}
+h1[id="menu"]{
+  top: 50%;
+
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  left: 37%;
+}
+div[id="wrapper"] {
+    text-align: center;
+}
+
+
 /*
 button[type="reset"] {
   width: 100%;
