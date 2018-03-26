@@ -3,8 +3,9 @@ var app = express();
 var mongoose = require("mongoose");//require mongodb package
 var bodyParser = require('body-parser');
 var path = require('path');
+var cookieParser = require('cookie-parser');
 var router = express.Router();
-app.use(express.cookieParser());//to set and release cookie
+//app.use(express.cookieParser());//to set and release cookie
 
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(express.static(path.join(__dirname, 'views')));
@@ -34,15 +35,16 @@ app.get("/write", (req, res) => {
   res.sendFile(__dirname + '/public/html/write.html');
 });
 app.get("/", (req, res) => {
+
   console.log("in main");
-  res.sendFile(__dirname + '/public/html/index.html');
+  res.sendFile(__dirname + '/public/html/menu.html');
 });
 
 app.get("/view", (req, res) => {
   console.log("in view Post");
   var temp = {"firstName":"Susil Ramarao"}
   console.log(temp);
-  User.find().exec((err, docs) => {
+  User.find(temp).exec((err, docs) => {
     if(err) res.json(err);
     else res.render('view', {'users':docs});
 
