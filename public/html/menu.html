@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+</head>
+<style>
+html{
+  background: url(images/photo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+<body>
+  <div id="wrapper">
+    <h1 id="menu"> Welcome to Menu Page</h1>
+    <button id="write" class="menu one">Let's Write</button>
+    <button id="view"class="menu two">View Past!</button>
+    <button id="logout" class="menu three">Logout</button>
+  </div>
+</body>
+
+<script type="text/javascript">
+document.getElementById("write").onclick = function () {
+        location.href = "write";
+    };
+document.getElementById("view").onclick = function () {
+            location.href = "view";
+  };
+  document.getElementById("logout").onclick = function () {
+              location.href = "logout";
+    };
+</script>
+
+</html>
